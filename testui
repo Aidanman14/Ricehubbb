@@ -1,0 +1,999 @@
+--[=[
+ d888b  db    db d888888b      .d888b.      db      db    db  .d8b.  
+88' Y8b 88    88   `88'        VP  `8D      88      88    88 d8' `8b 
+88      88    88    88            odD'      88      88    88 88ooo88 
+88  ooo 88    88    88          .88'        88      88    88 88~~~88 
+88. ~8~ 88b  d88   .88.        j88.         88booo. 88b  d88 88   88 
+ Y888P  ~Y8888P' Y888888P      888888D      Y88888P ~Y8888P' YP   YP  CONVERTER
+]=]
+
+-- Instances: 76 | Scripts: 16 | Modules: 0
+local G2L = {};
+
+-- StarterGui.ScreenGui
+G2L["1"] = Instance.new("ScreenGui", game:GetService("Players").LocalPlayer:WaitForChild("PlayerGui"));
+
+
+-- StarterGui.ScreenGui.Loading
+G2L["2"] = Instance.new("Frame", G2L["1"]);
+G2L["2"]["BorderSizePixel"] = 0;
+G2L["2"]["BackgroundColor3"] = Color3.fromRGB(49, 47, 44);
+G2L["2"]["AnchorPoint"] = Vector2.new(0.5, 0.5);
+G2L["2"]["Size"] = UDim2.new(0, 348, 0, 170);
+G2L["2"]["Position"] = UDim2.new(0.5, 0, 0.5, 0);
+G2L["2"]["Name"] = [[Loading]];
+
+-- StarterGui.ScreenGui.Loading.Frame
+G2L["3"] = Instance.new("Frame", G2L["2"]);
+G2L["3"]["BorderSizePixel"] = 0;
+G2L["3"]["BackgroundColor3"] = Color3.fromRGB(38, 38, 37);
+G2L["3"]["Size"] = UDim2.new(0, 348, 0, 34);
+
+-- StarterGui.ScreenGui.Loading.Frame.TextLabel
+G2L["4"] = Instance.new("TextLabel", G2L["3"]);
+G2L["4"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["4"]["TextSize"] = 28;
+G2L["4"]["TextColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["4"]["Size"] = UDim2.new(0, 125, 0, 50);
+G2L["4"]["Text"] = [[Rice Hub]];
+G2L["4"]["Font"] = Enum.Font.Gotham;
+G2L["4"]["BackgroundTransparency"] = 1;
+G2L["4"]["Position"] = UDim2.new(0.12068966031074524, 0, -0.24509833753108978, 0);
+
+-- StarterGui.ScreenGui.Loading.Frame.ImageLabel
+G2L["5"] = Instance.new("ImageLabel", G2L["3"]);
+G2L["5"]["BorderSizePixel"] = 0;
+G2L["5"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["5"]["Image"] = [[http://www.roblox.com/asset/?id=10441776747]];
+G2L["5"]["Size"] = UDim2.new(0, 38, 0, 34);
+G2L["5"]["BackgroundTransparency"] = 1;
+G2L["5"]["Position"] = UDim2.new(0.011724136769771576, 0, -0.0040024518966674805, 0);
+
+-- StarterGui.ScreenGui.Loading.Loadingtext
+G2L["6"] = Instance.new("TextLabel", G2L["2"]);
+G2L["6"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["6"]["TextSize"] = 21;
+G2L["6"]["TextColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["6"]["AnchorPoint"] = Vector2.new(0.5, 0.5);
+G2L["6"]["Size"] = UDim2.new(0, 200, 0, 50);
+G2L["6"]["Text"] = [[Loading..]];
+G2L["6"]["Name"] = [[Loadingtext]];
+G2L["6"]["Font"] = Enum.Font.Gotham;
+G2L["6"]["BackgroundTransparency"] = 1;
+G2L["6"]["Position"] = UDim2.new(0.5, 0, 0.5, 0);
+
+-- StarterGui.ScreenGui.Loading.eee
+G2L["7"] = Instance.new("Frame", G2L["2"]);
+G2L["7"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["7"]["Size"] = UDim2.new(0, 290, 0, 18);
+G2L["7"]["Position"] = UDim2.new(0.0833333358168602, 0, 0.7107843160629272, 0);
+G2L["7"]["Name"] = [[eee]];
+
+-- StarterGui.ScreenGui.Loading.eee.fillingbar
+G2L["8"] = Instance.new("Frame", G2L["7"]);
+G2L["8"]["BorderSizePixel"] = 0;
+G2L["8"]["BackgroundColor3"] = Color3.fromRGB(171, 255, 0);
+G2L["8"]["Size"] = UDim2.new(0, 45, 0, 18);
+G2L["8"]["Name"] = [[fillingbar]];
+
+-- StarterGui.ScreenGui.Loading.eee.fillingbar.LocalScript
+G2L["9"] = Instance.new("LocalScript", G2L["8"]);
+
+
+-- StarterGui.ScreenGui.Loading.eee.fillingbar.UICorner
+G2L["a"] = Instance.new("UICorner", G2L["8"]);
+
+
+-- StarterGui.ScreenGui.Loading.eee.UICorner
+G2L["b"] = Instance.new("UICorner", G2L["7"]);
+
+
+-- StarterGui.ScreenGui.Loading.eee.ImageLabel
+G2L["c"] = Instance.new("ImageLabel", G2L["7"]);
+G2L["c"]["BorderSizePixel"] = 0;
+G2L["c"]["ImageTransparency"] = 1;
+G2L["c"]["Image"] = [[http://www.roblox.com/asset/?id=6023426936]];
+G2L["c"]["Size"] = UDim2.new(0, 57, 0, 55);
+G2L["c"]["BackgroundTransparency"] = 1;
+G2L["c"]["Position"] = UDim2.new(0.3984675407409668, 0, -1.0555553436279297, 0);
+
+-- StarterGui.ScreenGui.Credits
+G2L["d"] = Instance.new("Frame", G2L["1"]);
+G2L["d"]["BorderSizePixel"] = 0;
+G2L["d"]["BackgroundColor3"] = Color3.fromRGB(49, 47, 44);
+G2L["d"]["Size"] = UDim2.new(0, 223, 0, 100);
+G2L["d"]["Position"] = UDim2.new(0.02500000037252903, 0, 15, 0);
+G2L["d"]["Name"] = [[Credits]];
+
+-- StarterGui.ScreenGui.Credits.Aidanman14
+G2L["e"] = Instance.new("TextLabel", G2L["d"]);
+G2L["e"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["e"]["TextSize"] = 21;
+G2L["e"]["TextColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["e"]["AnchorPoint"] = Vector2.new(0.5, 0.5);
+G2L["e"]["Size"] = UDim2.new(0, 200, 0, 50);
+G2L["e"]["Text"] = [[Owner : Aidanman14]];
+G2L["e"]["Name"] = [[Aidanman14]];
+G2L["e"]["Font"] = Enum.Font.Gotham;
+G2L["e"]["BackgroundTransparency"] = 1;
+G2L["e"]["Position"] = UDim2.new(0.49551570415496826, 0, 0.5, 0);
+
+-- StarterGui.ScreenGui.Credits.LocalScript
+G2L["f"] = Instance.new("LocalScript", G2L["d"]);
+
+
+-- StarterGui.ScreenGui.Credits.Frame
+G2L["10"] = Instance.new("Frame", G2L["d"]);
+G2L["10"]["BorderSizePixel"] = 0;
+G2L["10"]["BackgroundColor3"] = Color3.fromRGB(38, 38, 37);
+G2L["10"]["Size"] = UDim2.new(0, 223, 0, 34);
+G2L["10"]["Position"] = UDim2.new(-6.842506650173164e-08, 0, 0, 0);
+
+-- StarterGui.ScreenGui.Credits.Frame.TextLabel
+G2L["11"] = Instance.new("TextLabel", G2L["10"]);
+G2L["11"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["11"]["TextSize"] = 28;
+G2L["11"]["TextColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["11"]["Size"] = UDim2.new(0, 133, 0, 50);
+G2L["11"]["Text"] = [[Rice Hub]];
+G2L["11"]["Font"] = Enum.Font.Gotham;
+G2L["11"]["BackgroundTransparency"] = 1;
+G2L["11"]["Position"] = UDim2.new(0.13376039266586304, 0, -0.24509833753108978, 0);
+
+-- StarterGui.ScreenGui.Credits.Frame.ImageLabel
+G2L["12"] = Instance.new("ImageLabel", G2L["10"]);
+G2L["12"]["BorderSizePixel"] = 0;
+G2L["12"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["12"]["Image"] = [[http://www.roblox.com/asset/?id=10441776747]];
+G2L["12"]["Size"] = UDim2.new(0, 38, 0, 34);
+G2L["12"]["BackgroundTransparency"] = 1;
+
+-- StarterGui.ScreenGui.Mainui
+G2L["13"] = Instance.new("Frame", G2L["1"]);
+G2L["13"]["BorderSizePixel"] = 0;
+G2L["13"]["BackgroundColor3"] = Color3.fromRGB(49, 47, 44);
+G2L["13"]["AnchorPoint"] = Vector2.new(1, 0.5);
+G2L["13"]["Size"] = UDim2.new(0, 600, 0, 485);
+G2L["13"]["Position"] = UDim2.new(0.9808542728424072, 0, 0.49929678440093994, 0);
+G2L["13"]["Visible"] = false;
+G2L["13"]["Name"] = [[Mainui]];
+
+-- StarterGui.ScreenGui.Mainui.Frame
+G2L["14"] = Instance.new("Frame", G2L["13"]);
+G2L["14"]["BorderSizePixel"] = 0;
+G2L["14"]["BackgroundColor3"] = Color3.fromRGB(38, 38, 37);
+G2L["14"]["Size"] = UDim2.new(0, 600, 0, 34);
+
+-- StarterGui.ScreenGui.Mainui.Frame.TextLabel
+G2L["15"] = Instance.new("TextLabel", G2L["14"]);
+G2L["15"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["15"]["TextSize"] = 28;
+G2L["15"]["TextColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["15"]["Size"] = UDim2.new(0, 133, 0, 50);
+G2L["15"]["Text"] = [[Rice Hub]];
+G2L["15"]["Font"] = Enum.Font.Gotham;
+G2L["15"]["BackgroundTransparency"] = 1;
+G2L["15"]["Position"] = UDim2.new(0.06201151758432388, 0, -0.24509833753108978, 0);
+
+-- StarterGui.ScreenGui.Mainui.Frame.ImageLabel
+G2L["16"] = Instance.new("ImageLabel", G2L["14"]);
+G2L["16"]["BorderSizePixel"] = 0;
+G2L["16"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["16"]["Image"] = [[http://www.roblox.com/asset/?id=10441776747]];
+G2L["16"]["Size"] = UDim2.new(0, 38, 0, 34);
+G2L["16"]["BackgroundTransparency"] = 1;
+
+-- StarterGui.ScreenGui.Mainui.Line3
+G2L["17"] = Instance.new("Frame", G2L["13"]);
+G2L["17"]["BorderSizePixel"] = 0;
+G2L["17"]["BackgroundColor3"] = Color3.fromRGB(38, 38, 37);
+G2L["17"]["Size"] = UDim2.new(0, 2, 0, 433);
+G2L["17"]["Position"] = UDim2.new(0.3149999976158142, 0, 0.08453608304262161, 0);
+G2L["17"]["Name"] = [[Line3]];
+
+-- StarterGui.ScreenGui.Mainui.Line2
+G2L["18"] = Instance.new("Frame", G2L["13"]);
+G2L["18"]["BorderSizePixel"] = 0;
+G2L["18"]["BackgroundColor3"] = Color3.fromRGB(38, 38, 37);
+G2L["18"]["Size"] = UDim2.new(0, 176, 0, 2);
+G2L["18"]["Position"] = UDim2.new(0.011666666716337204, 0, 0.8268041610717773, 0);
+G2L["18"]["Name"] = [[Line2]];
+
+-- StarterGui.ScreenGui.Mainui.Homebutton
+G2L["19"] = Instance.new("TextButton", G2L["13"]);
+G2L["19"]["BorderSizePixel"] = 0;
+G2L["19"]["TextSize"] = 23;
+G2L["19"]["BackgroundColor3"] = Color3.fromRGB(38, 38, 37);
+G2L["19"]["TextColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["19"]["Size"] = UDim2.new(0, 176, 0, 46);
+G2L["19"]["Name"] = [[Homebutton]];
+G2L["19"]["Text"] = [[Home]];
+G2L["19"]["Font"] = Enum.Font.Gotham;
+G2L["19"]["Position"] = UDim2.new(0.011666666716337204, 0, 0.08453608304262161, 0);
+
+-- StarterGui.ScreenGui.Mainui.Homebutton.Frame
+G2L["1a"] = Instance.new("Frame", G2L["19"]);
+G2L["1a"]["BorderSizePixel"] = 0;
+G2L["1a"]["BackgroundColor3"] = Color3.fromRGB(54, 52, 49);
+G2L["1a"]["Size"] = UDim2.new(0, 13, 0, 46);
+G2L["1a"]["Position"] = UDim2.new(0.9273119568824768, 0, 0.01449253223836422, 0);
+
+-- StarterGui.ScreenGui.Mainui.Homebutton.LocalScript
+G2L["1b"] = Instance.new("LocalScript", G2L["19"]);
+
+
+-- StarterGui.ScreenGui.Mainui.Homebutton.LocalScript
+G2L["1c"] = Instance.new("LocalScript", G2L["19"]);
+
+
+-- StarterGui.ScreenGui.Mainui.Espbutton
+G2L["1d"] = Instance.new("TextButton", G2L["13"]);
+G2L["1d"]["BorderSizePixel"] = 0;
+G2L["1d"]["TextSize"] = 23;
+G2L["1d"]["BackgroundColor3"] = Color3.fromRGB(38, 38, 37);
+G2L["1d"]["TextColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["1d"]["Size"] = UDim2.new(0, 176, 0, 46);
+G2L["1d"]["Name"] = [[Espbutton]];
+G2L["1d"]["Text"] = [[Esp]];
+G2L["1d"]["Font"] = Enum.Font.Gotham;
+G2L["1d"]["Position"] = UDim2.new(0.011666666716337204, 0, 0.36907216906547546, 0);
+
+-- StarterGui.ScreenGui.Mainui.Espbutton.Frame
+G2L["1e"] = Instance.new("Frame", G2L["1d"]);
+G2L["1e"]["BorderSizePixel"] = 0;
+G2L["1e"]["BackgroundColor3"] = Color3.fromRGB(54, 52, 49);
+G2L["1e"]["Size"] = UDim2.new(0, 13, 0, 46);
+G2L["1e"]["Position"] = UDim2.new(0.9273119568824768, 0, 0.01449253223836422, 0);
+G2L["1e"]["Visible"] = false;
+
+-- StarterGui.ScreenGui.Mainui.Espbutton.LocalScript
+G2L["1f"] = Instance.new("LocalScript", G2L["1d"]);
+
+
+-- StarterGui.ScreenGui.Mainui.Espbutton.LocalScript
+G2L["20"] = Instance.new("LocalScript", G2L["1d"]);
+
+
+-- StarterGui.ScreenGui.Mainui.playerbutton
+G2L["21"] = Instance.new("TextButton", G2L["13"]);
+G2L["21"]["BorderSizePixel"] = 0;
+G2L["21"]["TextSize"] = 23;
+G2L["21"]["BackgroundColor3"] = Color3.fromRGB(38, 38, 37);
+G2L["21"]["TextColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["21"]["Size"] = UDim2.new(0, 176, 0, 46);
+G2L["21"]["Name"] = [[playerbutton]];
+G2L["21"]["Text"] = [[Player]];
+G2L["21"]["Font"] = Enum.Font.Gotham;
+G2L["21"]["Position"] = UDim2.new(0.011666666716337204, 0, 0.2742268145084381, 0);
+
+-- StarterGui.ScreenGui.Mainui.playerbutton.Frame
+G2L["22"] = Instance.new("Frame", G2L["21"]);
+G2L["22"]["BorderSizePixel"] = 0;
+G2L["22"]["BackgroundColor3"] = Color3.fromRGB(54, 52, 49);
+G2L["22"]["Size"] = UDim2.new(0, 13, 0, 46);
+G2L["22"]["Position"] = UDim2.new(0.9273119568824768, 0, 0.01449253223836422, 0);
+G2L["22"]["Visible"] = false;
+
+-- StarterGui.ScreenGui.Mainui.playerbutton.LocalScript
+G2L["23"] = Instance.new("LocalScript", G2L["21"]);
+
+
+-- StarterGui.ScreenGui.Mainui.playerbutton.LocalScript
+G2L["24"] = Instance.new("LocalScript", G2L["21"]);
+
+
+-- StarterGui.ScreenGui.Mainui.autofarmbutton
+G2L["25"] = Instance.new("TextButton", G2L["13"]);
+G2L["25"]["BorderSizePixel"] = 0;
+G2L["25"]["TextSize"] = 23;
+G2L["25"]["BackgroundColor3"] = Color3.fromRGB(38, 38, 37);
+G2L["25"]["TextColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["25"]["Size"] = UDim2.new(0, 176, 0, 46);
+G2L["25"]["Name"] = [[autofarmbutton]];
+G2L["25"]["Text"] = [[Autofarm]];
+G2L["25"]["Font"] = Enum.Font.Gotham;
+G2L["25"]["Position"] = UDim2.new(0.011666666716337204, 0, 0.17938144505023956, 0);
+
+-- StarterGui.ScreenGui.Mainui.autofarmbutton.Frame
+G2L["26"] = Instance.new("Frame", G2L["25"]);
+G2L["26"]["BorderSizePixel"] = 0;
+G2L["26"]["BackgroundColor3"] = Color3.fromRGB(54, 52, 49);
+G2L["26"]["Size"] = UDim2.new(0, 13, 0, 46);
+G2L["26"]["Position"] = UDim2.new(0.9273119568824768, 0, 0.01449253223836422, 0);
+G2L["26"]["Visible"] = false;
+
+-- StarterGui.ScreenGui.Mainui.autofarmbutton.LocalScript
+G2L["27"] = Instance.new("LocalScript", G2L["25"]);
+
+
+-- StarterGui.ScreenGui.Mainui.autofarmbutton.LocalScript
+G2L["28"] = Instance.new("LocalScript", G2L["25"]);
+
+
+-- StarterGui.ScreenGui.Mainui.Line1
+G2L["29"] = Instance.new("Frame", G2L["13"]);
+G2L["29"]["BorderSizePixel"] = 0;
+G2L["29"]["BackgroundColor3"] = Color3.fromRGB(38, 38, 37);
+G2L["29"]["Size"] = UDim2.new(0, 176, 0, 2);
+G2L["29"]["Position"] = UDim2.new(0.011666666716337204, 0, 0.47835054993629456, 0);
+G2L["29"]["Name"] = [[Line1]];
+
+-- StarterGui.ScreenGui.Mainui.settingsbutton
+G2L["2a"] = Instance.new("TextButton", G2L["13"]);
+G2L["2a"]["BorderSizePixel"] = 0;
+G2L["2a"]["TextSize"] = 23;
+G2L["2a"]["BackgroundColor3"] = Color3.fromRGB(38, 38, 37);
+G2L["2a"]["TextColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["2a"]["Size"] = UDim2.new(0, 176, 0, 46);
+G2L["2a"]["Name"] = [[settingsbutton]];
+G2L["2a"]["Text"] = [[Settings]];
+G2L["2a"]["Font"] = Enum.Font.Gotham;
+G2L["2a"]["Position"] = UDim2.new(0.011666666716337204, 0, 0.6020618677139282, 0);
+
+-- StarterGui.ScreenGui.Mainui.settingsbutton.Frame
+G2L["2b"] = Instance.new("Frame", G2L["2a"]);
+G2L["2b"]["BorderSizePixel"] = 0;
+G2L["2b"]["BackgroundColor3"] = Color3.fromRGB(54, 52, 49);
+G2L["2b"]["Size"] = UDim2.new(0, 13, 0, 46);
+G2L["2b"]["Position"] = UDim2.new(0.9273119568824768, 0, 0.01449253223836422, 0);
+G2L["2b"]["Visible"] = false;
+
+-- StarterGui.ScreenGui.Mainui.settingsbutton.LocalScript
+G2L["2c"] = Instance.new("LocalScript", G2L["2a"]);
+
+
+-- StarterGui.ScreenGui.Mainui.settingsbutton.LocalScript
+G2L["2d"] = Instance.new("LocalScript", G2L["2a"]);
+
+
+-- StarterGui.ScreenGui.Mainui.creditsbutton
+G2L["2e"] = Instance.new("TextButton", G2L["13"]);
+G2L["2e"]["BorderSizePixel"] = 0;
+G2L["2e"]["TextSize"] = 23;
+G2L["2e"]["BackgroundColor3"] = Color3.fromRGB(38, 38, 37);
+G2L["2e"]["TextColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["2e"]["Size"] = UDim2.new(0, 176, 0, 46);
+G2L["2e"]["Name"] = [[creditsbutton]];
+G2L["2e"]["Text"] = [[Credits]];
+G2L["2e"]["Font"] = Enum.Font.Gotham;
+G2L["2e"]["Position"] = UDim2.new(0.011666666716337204, 0, 0.5072165131568909, 0);
+
+-- StarterGui.ScreenGui.Mainui.creditsbutton.Frame
+G2L["2f"] = Instance.new("Frame", G2L["2e"]);
+G2L["2f"]["BorderSizePixel"] = 0;
+G2L["2f"]["BackgroundColor3"] = Color3.fromRGB(54, 52, 49);
+G2L["2f"]["Size"] = UDim2.new(0, 13, 0, 46);
+G2L["2f"]["Position"] = UDim2.new(0.9273119568824768, 0, 0.01449253223836422, 0);
+G2L["2f"]["Visible"] = false;
+
+-- StarterGui.ScreenGui.Mainui.creditsbutton.LocalScript
+G2L["30"] = Instance.new("LocalScript", G2L["2e"]);
+
+
+-- StarterGui.ScreenGui.Mainui.creditsbutton.LocalScript
+G2L["31"] = Instance.new("LocalScript", G2L["2e"]);
+
+
+-- StarterGui.ScreenGui.Mainui.pvbutton
+G2L["32"] = Instance.new("TextButton", G2L["13"]);
+G2L["32"]["BorderSizePixel"] = 0;
+G2L["32"]["TextSize"] = 23;
+G2L["32"]["BackgroundColor3"] = Color3.fromRGB(38, 38, 37);
+G2L["32"]["TextColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["32"]["Size"] = UDim2.new(0, 176, 0, 46);
+G2L["32"]["Name"] = [[pvbutton]];
+G2L["32"]["Text"] = [[Discord]];
+G2L["32"]["Font"] = Enum.Font.Gotham;
+G2L["32"]["Position"] = UDim2.new(0.011666666716337204, 0, 0.6969072222709656, 0);
+
+-- StarterGui.ScreenGui.Mainui.pvbutton.Frame
+G2L["33"] = Instance.new("Frame", G2L["32"]);
+G2L["33"]["BorderSizePixel"] = 0;
+G2L["33"]["BackgroundColor3"] = Color3.fromRGB(54, 52, 49);
+G2L["33"]["Size"] = UDim2.new(0, 13, 0, 46);
+G2L["33"]["Position"] = UDim2.new(0.9273119568824768, 0, 0.01449253223836422, 0);
+G2L["33"]["Visible"] = false;
+
+-- StarterGui.ScreenGui.Mainui.Hometab
+G2L["34"] = Instance.new("Frame", G2L["13"]);
+G2L["34"]["BorderSizePixel"] = 0;
+G2L["34"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["34"]["BackgroundTransparency"] = 1;
+G2L["34"]["Size"] = UDim2.new(0, 390, 0, 433);
+G2L["34"]["Position"] = UDim2.new(0.33556458353996277, 0, 0.08392997831106186, 0);
+G2L["34"]["Name"] = [[Hometab]];
+
+-- StarterGui.ScreenGui.Mainui.Hometab.TextLabel
+G2L["35"] = Instance.new("TextLabel", G2L["34"]);
+G2L["35"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["35"]["TextSize"] = 28;
+G2L["35"]["TextColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["35"]["Size"] = UDim2.new(0, 133, 0, 50);
+G2L["35"]["Text"] = [[Rice Hub]];
+G2L["35"]["Font"] = Enum.Font.Gotham;
+G2L["35"]["BackgroundTransparency"] = 1;
+G2L["35"]["Position"] = UDim2.new(0.2979089617729187, 0, 0.40617185831069946, 0);
+
+-- StarterGui.ScreenGui.Mainui.Autotab
+G2L["36"] = Instance.new("Frame", G2L["13"]);
+G2L["36"]["BorderSizePixel"] = 0;
+G2L["36"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["36"]["BackgroundTransparency"] = 1;
+G2L["36"]["Size"] = UDim2.new(0, 390, 0, 433);
+G2L["36"]["Position"] = UDim2.new(0.33556458353996277, 0, 0.08392997831106186, 0);
+G2L["36"]["Visible"] = false;
+G2L["36"]["Name"] = [[Autotab]];
+
+-- StarterGui.ScreenGui.Mainui.Autotab.TextLabel
+G2L["37"] = Instance.new("TextLabel", G2L["36"]);
+G2L["37"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["37"]["TextSize"] = 28;
+G2L["37"]["TextColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["37"]["Size"] = UDim2.new(0, 133, 0, 50);
+G2L["37"]["Text"] = [[Autofarm]];
+G2L["37"]["Font"] = Enum.Font.Gotham;
+G2L["37"]["BackgroundTransparency"] = 1;
+G2L["37"]["Position"] = UDim2.new(0.2979089617729187, 0, 0.40617185831069946, 0);
+
+-- StarterGui.ScreenGui.Mainui.Playertab
+G2L["38"] = Instance.new("Frame", G2L["13"]);
+G2L["38"]["BorderSizePixel"] = 0;
+G2L["38"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["38"]["BackgroundTransparency"] = 1;
+G2L["38"]["Size"] = UDim2.new(0, 390, 0, 433);
+G2L["38"]["Position"] = UDim2.new(0.33556458353996277, 0, 0.08392997831106186, 0);
+G2L["38"]["Visible"] = false;
+G2L["38"]["Name"] = [[Playertab]];
+
+-- StarterGui.ScreenGui.Mainui.Playertab.TextLabel
+G2L["39"] = Instance.new("TextLabel", G2L["38"]);
+G2L["39"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["39"]["TextSize"] = 28;
+G2L["39"]["TextColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["39"]["Size"] = UDim2.new(0, 133, 0, 50);
+G2L["39"]["Text"] = [[Player]];
+G2L["39"]["Font"] = Enum.Font.Gotham;
+G2L["39"]["BackgroundTransparency"] = 1;
+G2L["39"]["Position"] = UDim2.new(0.2979089617729187, 0, 0.40617185831069946, 0);
+
+-- StarterGui.ScreenGui.Mainui.esptab
+G2L["3a"] = Instance.new("Frame", G2L["13"]);
+G2L["3a"]["BorderSizePixel"] = 0;
+G2L["3a"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["3a"]["BackgroundTransparency"] = 1;
+G2L["3a"]["Size"] = UDim2.new(0, 390, 0, 433);
+G2L["3a"]["Position"] = UDim2.new(0.33556458353996277, 0, 0.08392997831106186, 0);
+G2L["3a"]["Visible"] = false;
+G2L["3a"]["Name"] = [[esptab]];
+
+-- StarterGui.ScreenGui.Mainui.esptab.TextLabel
+G2L["3b"] = Instance.new("TextLabel", G2L["3a"]);
+G2L["3b"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["3b"]["TextSize"] = 28;
+G2L["3b"]["TextColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["3b"]["Size"] = UDim2.new(0, 133, 0, 50);
+G2L["3b"]["Text"] = [[esp]];
+G2L["3b"]["Font"] = Enum.Font.Gotham;
+G2L["3b"]["BackgroundTransparency"] = 1;
+G2L["3b"]["Position"] = UDim2.new(0.2979089617729187, 0, 0.40617185831069946, 0);
+
+-- StarterGui.ScreenGui.Mainui.creditstab
+G2L["3c"] = Instance.new("Frame", G2L["13"]);
+G2L["3c"]["BorderSizePixel"] = 0;
+G2L["3c"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["3c"]["BackgroundTransparency"] = 1;
+G2L["3c"]["Size"] = UDim2.new(0, 390, 0, 433);
+G2L["3c"]["Position"] = UDim2.new(0.33556458353996277, 0, 0.08392997831106186, 0);
+G2L["3c"]["Visible"] = false;
+G2L["3c"]["Name"] = [[creditstab]];
+
+-- StarterGui.ScreenGui.Mainui.creditstab.TextLabel
+G2L["3d"] = Instance.new("TextLabel", G2L["3c"]);
+G2L["3d"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["3d"]["TextSize"] = 28;
+G2L["3d"]["TextColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["3d"]["Size"] = UDim2.new(0, 133, 0, 50);
+G2L["3d"]["Text"] = [[Credits]];
+G2L["3d"]["Font"] = Enum.Font.Gotham;
+G2L["3d"]["BackgroundTransparency"] = 1;
+G2L["3d"]["Position"] = UDim2.new(0.2979089617729187, 0, 0.40617185831069946, 0);
+
+-- StarterGui.ScreenGui.Mainui.settingstab
+G2L["3e"] = Instance.new("Frame", G2L["13"]);
+G2L["3e"]["BorderSizePixel"] = 0;
+G2L["3e"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["3e"]["BackgroundTransparency"] = 1;
+G2L["3e"]["Size"] = UDim2.new(0, 390, 0, 433);
+G2L["3e"]["Position"] = UDim2.new(0.33556458353996277, 0, 0.08392997831106186, 0);
+G2L["3e"]["Visible"] = false;
+G2L["3e"]["Name"] = [[settingstab]];
+
+-- StarterGui.ScreenGui.Mainui.settingstab.TextLabel
+G2L["3f"] = Instance.new("TextLabel", G2L["3e"]);
+G2L["3f"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["3f"]["TextSize"] = 28;
+G2L["3f"]["TextColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["3f"]["Size"] = UDim2.new(0, 133, 0, 50);
+G2L["3f"]["Text"] = [[Settings]];
+G2L["3f"]["Font"] = Enum.Font.Gotham;
+G2L["3f"]["BackgroundTransparency"] = 1;
+G2L["3f"]["Position"] = UDim2.new(0.2979089617729187, 0, 0.40617185831069946, 0);
+
+-- StarterGui.ScreenGui.Mainui.ImageLabel
+G2L["40"] = Instance.new("ImageLabel", G2L["13"]);
+G2L["40"]["BorderSizePixel"] = 0;
+G2L["40"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["40"]["Image"] = [[http://www.roblox.com/asset/?id=10441776747]];
+G2L["40"]["Size"] = UDim2.new(0, 38, 0, 34);
+G2L["40"]["BackgroundTransparency"] = 1;
+G2L["40"]["Position"] = UDim2.new(0.023333333432674408, 0, 0.8783504962921143, 0);
+
+-- StarterGui.ScreenGui.Mainui.ImageLabel
+G2L["41"] = Instance.new("ImageLabel", G2L["13"]);
+G2L["41"]["BorderSizePixel"] = 0;
+G2L["41"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["41"]["Image"] = [[http://www.roblox.com/asset/?id=10441776747]];
+G2L["41"]["Size"] = UDim2.new(0, 38, 0, 34);
+G2L["41"]["BackgroundTransparency"] = 1;
+G2L["41"]["Position"] = UDim2.new(0.2199999988079071, 0, 0.8783504962921143, 0);
+
+-- StarterGui.ScreenGui.Mainui.ImageLabel
+G2L["42"] = Instance.new("ImageLabel", G2L["13"]);
+G2L["42"]["BorderSizePixel"] = 0;
+G2L["42"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["42"]["Image"] = [[http://www.roblox.com/asset/?id=10441776747]];
+G2L["42"]["Size"] = UDim2.new(0, 38, 0, 34);
+G2L["42"]["BackgroundTransparency"] = 1;
+G2L["42"]["Position"] = UDim2.new(0.12666666507720947, 0, 0.8783504962921143, 0);
+
+-- StarterGui.ScreenGui.Mainui.Dragify
+G2L["43"] = Instance.new("LocalScript", G2L["13"]);
+G2L["43"]["Name"] = [[Dragify]];
+
+-- StarterGui.ScreenGui.Notice
+G2L["44"] = Instance.new("Frame", G2L["1"]);
+G2L["44"]["BorderSizePixel"] = 0;
+G2L["44"]["BackgroundColor3"] = Color3.fromRGB(49, 47, 44);
+G2L["44"]["AnchorPoint"] = Vector2.new(0.5, 0.5);
+G2L["44"]["Size"] = UDim2.new(0, 450, 0, 170);
+G2L["44"]["Position"] = UDim2.new(0.5, 0, 0.5, 0);
+G2L["44"]["Visible"] = false;
+G2L["44"]["Name"] = [[Notice]];
+
+-- StarterGui.ScreenGui.Notice.Frame
+G2L["45"] = Instance.new("Frame", G2L["44"]);
+G2L["45"]["BorderSizePixel"] = 0;
+G2L["45"]["BackgroundColor3"] = Color3.fromRGB(38, 38, 37);
+G2L["45"]["Size"] = UDim2.new(0, 450, 0, 34);
+
+-- StarterGui.ScreenGui.Notice.Frame.TextLabel
+G2L["46"] = Instance.new("TextLabel", G2L["45"]);
+G2L["46"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["46"]["TextSize"] = 28;
+G2L["46"]["TextColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["46"]["Size"] = UDim2.new(0, 125, 0, 50);
+G2L["46"]["Text"] = [[Rice Hub]];
+G2L["46"]["Font"] = Enum.Font.Gotham;
+G2L["46"]["BackgroundTransparency"] = 1;
+G2L["46"]["Position"] = UDim2.new(0.12068966031074524, 0, -0.24509833753108978, 0);
+
+-- StarterGui.ScreenGui.Notice.Frame.ImageLabel
+G2L["47"] = Instance.new("ImageLabel", G2L["45"]);
+G2L["47"]["BorderSizePixel"] = 0;
+G2L["47"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["47"]["Image"] = [[http://www.roblox.com/asset/?id=10441776747]];
+G2L["47"]["Size"] = UDim2.new(0, 38, 0, 34);
+G2L["47"]["BackgroundTransparency"] = 1;
+G2L["47"]["Position"] = UDim2.new(0.011724136769771576, 0, -0.0040024518966674805, 0);
+
+-- StarterGui.ScreenGui.Notice.Loadingtext
+G2L["48"] = Instance.new("TextLabel", G2L["44"]);
+G2L["48"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["48"]["TextSize"] = 21;
+G2L["48"]["TextColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["48"]["AnchorPoint"] = Vector2.new(0.5, 0.5);
+G2L["48"]["Size"] = UDim2.new(0, 432, 0, 50);
+G2L["48"]["Text"] = [[Please note that this script is in beta stages]];
+G2L["48"]["Name"] = [[Loadingtext]];
+G2L["48"]["Font"] = Enum.Font.Gotham;
+G2L["48"]["BackgroundTransparency"] = 1;
+G2L["48"]["Position"] = UDim2.new(0.5, 0, 0.38823530077934265, 0);
+
+-- StarterGui.ScreenGui.Notice.Loadingtext
+G2L["49"] = Instance.new("TextLabel", G2L["44"]);
+G2L["49"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["49"]["TextSize"] = 21;
+G2L["49"]["TextColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["49"]["AnchorPoint"] = Vector2.new(0.5, 0.5);
+G2L["49"]["Size"] = UDim2.new(0, 432, 0, 50);
+G2L["49"]["Text"] = [[So there might be alot of bugs]];
+G2L["49"]["Name"] = [[Loadingtext]];
+G2L["49"]["Font"] = Enum.Font.Gotham;
+G2L["49"]["BackgroundTransparency"] = 1;
+G2L["49"]["Position"] = UDim2.new(0.5, 0, 0.5, 0);
+
+-- StarterGui.ScreenGui.Notice.TextButton
+G2L["4a"] = Instance.new("TextButton", G2L["44"]);
+G2L["4a"]["BorderSizePixel"] = 0;
+G2L["4a"]["TextSize"] = 14;
+G2L["4a"]["BackgroundColor3"] = Color3.fromRGB(38, 38, 37);
+G2L["4a"]["TextColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["4a"]["Size"] = UDim2.new(0, 98, 0, 33);
+G2L["4a"]["Text"] = [[I understand!]];
+G2L["4a"]["Font"] = Enum.Font.Gotham;
+G2L["4a"]["Position"] = UDim2.new(0.3911111354827881, 0, 0.7117647528648376, 0);
+
+-- StarterGui.ScreenGui.Notice.TextButton.UICorner
+G2L["4b"] = Instance.new("UICorner", G2L["4a"]);
+
+
+-- StarterGui.ScreenGui.Notice.TextButton.LocalScript
+G2L["4c"] = Instance.new("LocalScript", G2L["4a"]);
+
+
+-- StarterGui.ScreenGui.Loading.eee.fillingbar.LocalScript
+local function C_9()
+    local script = G2L["9"];
+	
+	local filling = script.Parent
+	local loading = script.Parent.Parent.Parent.Loadingtext
+	local base = script.Parent.Parent
+	local tick = script.Parent.Parent.ImageLabel
+	local whole = script.Parent.Parent.Parent
+	local top = script.Parent.Parent.Parent.Frame
+	local text = script.Parent.Parent.Parent.Frame.TextLabel
+	local rice = script.Parent.Parent.Parent.Frame.ImageLabel
+	
+	wait(2)
+	loading.Text = "Loading assets"
+	filling:TweenSize(UDim2.new(0, 108,0,18))
+	wait(2)
+	loading.Text = "Cooking rice"
+	filling:TweenSize(UDim2.new(0, 203,0,18))
+	wait(2)
+	loading.Text = "Ready!"
+	filling:TweenSize(UDim2.new(0, 290,0,18))
+	
+	wait(2)
+	for i = 1,5 do
+		loading.TextTransparency += 0.2
+		filling.BackgroundTransparency += 0.2
+		base.BackgroundTransparency += 0.2
+		wait(0.1)
+	end
+	
+	wait(0.5)
+	for i = 1,2 do
+		tick.ImageTransparency -= 0.5
+		loading.TextTransparency = 0
+		loading.Text = "Rice hub has finished loading"
+		wait(0.5)
+	end
+	
+	wait(1)
+	for i = 1,5 do
+		loading.TextTransparency += 0.2
+		filling.BackgroundTransparency += 0.2
+		base.BackgroundTransparency += 0.2
+		tick.ImageTransparency += 0.2
+		whole.BackgroundTransparency += 0.2
+		top.BackgroundTransparency += 0.2
+		text.TextTransparency += 0.2
+		rice.ImageTransparency += 0.2
+		wait(0.1)
+	end
+	wait(1)
+	
+	script.Parent.Parent.Parent.Parent.Notice.Visible = true
+	
+	
+end;
+task.spawn(C_9);
+-- StarterGui.ScreenGui.Credits.LocalScript
+local function C_f()
+    local script = G2L["f"];
+	local credits = script.Parent
+	
+	credits:TweenPosition(UDim2.new(0.024, 0,0.859, 0), "Out", "Quad",1)
+	
+	wait(6.6)
+	
+	credits:TweenPosition(UDim2.new(0.024, 0,15, 0), "In", "Quad",1)
+	
+end;
+task.spawn(C_f);
+-- StarterGui.ScreenGui.Mainui.Homebutton.LocalScript
+local function C_1b()
+    local script = G2L["1b"];
+	local hometab = script.Parent.Parent.Hometab
+	local autotab = script.Parent.Parent.Autotab
+	local playertab = script.Parent.Parent.Playertab
+	local esptab = script.Parent.Parent.esptab
+	local creditstab = script.Parent.Parent.creditstab
+	local settingstab = script.Parent.Parent.settingstab
+	
+	script.Parent.MouseButton1Click:Connect(function()
+		hometab.Visible = true
+		autotab.Visible = false
+		playertab.Visible =false
+		esptab.Visible = false
+		creditstab.Visible = false
+		settingstab.Visible = false
+	end)
+end;
+task.spawn(C_1b);
+-- StarterGui.ScreenGui.Mainui.Homebutton.LocalScript
+local function C_1c()
+    local script = G2L["1c"];
+	local hometab = script.Parent.Parent.Homebutton.Frame
+	local autotab = script.Parent.Parent.autofarmbutton.Frame
+	local playertab = script.Parent.Parent.playerbutton.Frame
+	local esptab = script.Parent.Parent.Espbutton.Frame
+	local creditstab = script.Parent.Parent.creditsbutton.Frame
+	local settingstab = script.Parent.Parent.settingsbutton.Frame
+	
+	script.Parent.MouseButton1Click:Connect(function()
+		hometab.Visible = true
+		autotab.Visible = false
+		playertab.Visible =false
+		esptab.Visible = false
+		creditstab.Visible = false
+		settingstab.Visible = false
+	end)
+end;
+task.spawn(C_1c);
+-- StarterGui.ScreenGui.Mainui.Espbutton.LocalScript
+local function C_1f()
+    local script = G2L["1f"];
+	local hometab = script.Parent.Parent.Homebutton.Frame
+	local autotab = script.Parent.Parent.autofarmbutton.Frame
+	local playertab = script.Parent.Parent.playerbutton.Frame
+	local esptab = script.Parent.Parent.Espbutton.Frame
+	local creditstab = script.Parent.Parent.creditsbutton.Frame
+	local settingstab = script.Parent.Parent.settingsbutton.Frame
+	
+	script.Parent.MouseButton1Click:Connect(function()
+		hometab.Visible = false
+		autotab.Visible = false
+		playertab.Visible =false
+		esptab.Visible = true
+		creditstab.Visible = false
+		settingstab.Visible = false
+	end)
+end;
+task.spawn(C_1f);
+-- StarterGui.ScreenGui.Mainui.Espbutton.LocalScript
+local function C_20()
+    local script = G2L["20"];
+	local hometab = script.Parent.Parent.Hometab
+	local autotab = script.Parent.Parent.Autotab
+	local playertab = script.Parent.Parent.Playertab
+	local esptab = script.Parent.Parent.esptab
+	local creditstab = script.Parent.Parent.creditstab
+	local settingstab = script.Parent.Parent.settingstab
+	
+	script.Parent.MouseButton1Click:Connect(function()
+		hometab.Visible = false
+		autotab.Visible = false
+		playertab.Visible =false
+		esptab.Visible = true
+		creditstab.Visible = false
+		settingstab.Visible = false
+	end)
+end;
+task.spawn(C_20);
+-- StarterGui.ScreenGui.Mainui.playerbutton.LocalScript
+local function C_23()
+    local script = G2L["23"];
+	local hometab = script.Parent.Parent.Homebutton.Frame
+	local autotab = script.Parent.Parent.autofarmbutton.Frame
+	local playertab = script.Parent.Parent.playerbutton.Frame
+	local esptab = script.Parent.Parent.Espbutton.Frame
+	local creditstab = script.Parent.Parent.creditsbutton.Frame
+	local settingstab = script.Parent.Parent.settingsbutton.Frame
+	
+	script.Parent.MouseButton1Click:Connect(function()
+		hometab.Visible = false
+		autotab.Visible = false
+		playertab.Visible = true
+		esptab.Visible = false
+		creditstab.Visible = false
+		settingstab.Visible = false
+	end)
+end;
+task.spawn(C_23);
+-- StarterGui.ScreenGui.Mainui.playerbutton.LocalScript
+local function C_24()
+    local script = G2L["24"];
+	local hometab = script.Parent.Parent.Hometab
+	local autotab = script.Parent.Parent.Autotab
+	local playertab = script.Parent.Parent.Playertab
+	local esptab = script.Parent.Parent.esptab
+	local creditstab = script.Parent.Parent.creditstab
+	local settingstab = script.Parent.Parent.settingstab
+	
+	script.Parent.MouseButton1Click:Connect(function()
+		hometab.Visible = false
+		autotab.Visible = false
+		playertab.Visible = true
+		esptab.Visible = false
+		creditstab.Visible = false
+		settingstab.Visible = false
+	end)
+end;
+task.spawn(C_24);
+-- StarterGui.ScreenGui.Mainui.autofarmbutton.LocalScript
+local function C_27()
+    local script = G2L["27"];
+	local hometab = script.Parent.Parent.Homebutton.Frame
+	local autotab = script.Parent.Parent.autofarmbutton.Frame
+	local playertab = script.Parent.Parent.playerbutton.Frame
+	local esptab = script.Parent.Parent.Espbutton.Frame
+	local creditstab = script.Parent.Parent.creditsbutton.Frame
+	local settingstab = script.Parent.Parent.settingsbutton.Frame
+	
+	script.Parent.MouseButton1Click:Connect(function()
+		hometab.Visible = false
+		autotab.Visible = true
+		playertab.Visible =false
+		esptab.Visible = false
+		creditstab.Visible = false
+		settingstab.Visible = false
+	end)
+end;
+task.spawn(C_27);
+-- StarterGui.ScreenGui.Mainui.autofarmbutton.LocalScript
+local function C_28()
+    local script = G2L["28"];
+	local hometab = script.Parent.Parent.Hometab
+	local autotab = script.Parent.Parent.Autotab
+	local playertab = script.Parent.Parent.Playertab
+	local esptab = script.Parent.Parent.esptab
+	local creditstab = script.Parent.Parent.creditstab
+	local settingstab = script.Parent.Parent.settingstab
+	
+	script.Parent.MouseButton1Click:Connect(function()
+		hometab.Visible = false
+		autotab.Visible = true
+		playertab.Visible =false
+		esptab.Visible = false
+		creditstab.Visible = false
+		settingstab.Visible = false
+	end)
+end;
+task.spawn(C_28);
+-- StarterGui.ScreenGui.Mainui.settingsbutton.LocalScript
+local function C_2c()
+    local script = G2L["2c"];
+	local hometab = script.Parent.Parent.Homebutton.Frame
+	local autotab = script.Parent.Parent.autofarmbutton.Frame
+	local playertab = script.Parent.Parent.playerbutton.Frame
+	local esptab = script.Parent.Parent.Espbutton.Frame
+	local creditstab = script.Parent.Parent.creditsbutton.Frame
+	local settingstab = script.Parent.Parent.settingsbutton.Frame
+	
+	script.Parent.MouseButton1Click:Connect(function()
+		hometab.Visible = false
+		autotab.Visible = false
+		playertab.Visible =false
+		esptab.Visible = false
+		creditstab.Visible = false
+		settingstab.Visible = true
+	end)
+end;
+task.spawn(C_2c);
+-- StarterGui.ScreenGui.Mainui.settingsbutton.LocalScript
+local function C_2d()
+    local script = G2L["2d"];
+	local hometab = script.Parent.Parent.Hometab
+	local autotab = script.Parent.Parent.Autotab
+	local playertab = script.Parent.Parent.Playertab
+	local esptab = script.Parent.Parent.esptab
+	local creditstab = script.Parent.Parent.creditstab
+	local settingstab = script.Parent.Parent.settingstab
+	
+	script.Parent.MouseButton1Click:Connect(function()
+		hometab.Visible = false
+		autotab.Visible = false
+		playertab.Visible =false
+		esptab.Visible = false
+		creditstab.Visible = false
+		settingstab.Visible = true
+	end)
+end;
+task.spawn(C_2d);
+-- StarterGui.ScreenGui.Mainui.creditsbutton.LocalScript
+local function C_30()
+    local script = G2L["30"];
+	local hometab = script.Parent.Parent.Homebutton.Frame
+	local autotab = script.Parent.Parent.autofarmbutton.Frame
+	local playertab = script.Parent.Parent.playerbutton.Frame
+	local esptab = script.Parent.Parent.Espbutton.Frame
+	local creditstab = script.Parent.Parent.creditsbutton.Frame
+	local settingstab = script.Parent.Parent.settingsbutton.Frame
+	
+	script.Parent.MouseButton1Click:Connect(function()
+		hometab.Visible = false
+		autotab.Visible = false
+		playertab.Visible =false
+		esptab.Visible = false
+		creditstab.Visible = true
+		settingstab.Visible = false
+	end)
+end;
+task.spawn(C_30);
+-- StarterGui.ScreenGui.Mainui.creditsbutton.LocalScript
+local function C_31()
+    local script = G2L["31"];
+	local hometab = script.Parent.Parent.Hometab
+	local autotab = script.Parent.Parent.Autotab
+	local playertab = script.Parent.Parent.Playertab
+	local esptab = script.Parent.Parent.esptab
+	local creditstab = script.Parent.Parent.creditstab
+	local settingstab = script.Parent.Parent.settingstab
+	
+	script.Parent.MouseButton1Click:Connect(function()
+		hometab.Visible = false
+		autotab.Visible = false
+		playertab.Visible =false
+		esptab.Visible = false
+		creditstab.Visible = true
+		settingstab.Visible = false
+	end)
+end;
+task.spawn(C_31);
+-- StarterGui.ScreenGui.Mainui.Dragify
+local function C_43()
+    local script = G2L["43"];
+	local UIS = game:GetService("UserInputService")
+	function dragify(Frame)
+	    dragToggle = nil
+	    local dragSpeed = 0.50
+	    dragInput = nil
+	    dragStart = nil
+	    local dragPos = nil
+	    function updateInput(input)
+	        local Delta = input.Position - dragStart
+	        local Position = UDim2.new(startPos.X.Scale, startPos.X.Offset + Delta.X, startPos.Y.Scale, startPos.Y.Offset + Delta.Y)
+	        game:GetService("TweenService"):Create(Frame, TweenInfo.new(0.30), {Position = Position}):Play()
+	    end
+	    Frame.InputBegan:Connect(function(input)
+	        if (input.UserInputType == Enum.UserInputType.MouseButton1 or input.UserInputType == Enum.UserInputType.Touch) and UIS:GetFocusedTextBox() == nil then
+	            dragToggle = true
+	            dragStart = input.Position
+	            startPos = Frame.Position
+	            input.Changed:Connect(function()
+	                if input.UserInputState == Enum.UserInputState.End then
+	                    dragToggle = false
+	                end
+	            end)
+	        end
+	    end)
+	    Frame.InputChanged:Connect(function(input)
+	        if input.UserInputType == Enum.UserInputType.MouseMovement or input.UserInputType == Enum.UserInputType.Touch then
+	            dragInput = input
+	        end
+	    end)
+	    game:GetService("UserInputService").InputChanged:Connect(function(input)
+	        if input == dragInput and dragToggle then
+	            updateInput(input)
+	        end
+	    end)
+	end
+	
+	dragify(script.Parent)
+end;
+task.spawn(C_43);
+-- StarterGui.ScreenGui.Notice.TextButton.LocalScript
+local function C_4c()
+    local script = G2L["4c"];
+	local ui = script.Parent.Parent
+	
+	script.Parent.MouseButton1Click:Connect(function()
+		ui.Visible = false
+		script.Parent.Parent.Parent.Mainui.Visible = true
+	end)
+end;
+task.spawn(C_4c);
+
+return G2L["1"];
